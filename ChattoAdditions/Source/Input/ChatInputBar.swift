@@ -46,10 +46,10 @@ open class ChatInputBar: ReusableXibView {
         return !inputBar.textView.text.isEmpty
     }
 
-    @IBOutlet weak var scrollView: HorizontalStackScrollView!
-    @IBOutlet weak var textView: ExpandableTextView!
-    @IBOutlet weak var sendButton: UIButton!
-    @IBOutlet weak var topBorderHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak open var scrollView: HorizontalStackScrollView!
+    @IBOutlet weak open var textView: ExpandableTextView!
+    @IBOutlet weak open var sendButton: UIButton!
+    @IBOutlet weak open var topBorderHeightConstraint: NSLayoutConstraint!
 
     @IBOutlet var constraintsForHiddenTextView: [NSLayoutConstraint]!
     @IBOutlet var constraintsForVisibleTextView: [NSLayoutConstraint]!
