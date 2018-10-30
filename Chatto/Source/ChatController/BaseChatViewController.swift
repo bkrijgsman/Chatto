@@ -83,7 +83,8 @@ open class BaseChatViewController: UIViewController, UICollectionViewDataSource,
         }
     }
 
-    deinit {
+    deinit {        
+        self.keyboardTracker.stopTracking()
         self.collectionView?.delegate = nil
         self.collectionView?.dataSource = nil
     }
@@ -126,7 +127,6 @@ open class BaseChatViewController: UIViewController, UICollectionViewDataSource,
 
     open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.keyboardTracker.stopTracking()
     }
 
     private func addCollectionView() {
