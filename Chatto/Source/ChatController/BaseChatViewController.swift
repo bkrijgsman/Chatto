@@ -84,7 +84,7 @@ open class BaseChatViewController: UIViewController, UICollectionViewDataSource,
     }
 
     deinit {        
-        self.keyboardTracker.stopTracking()
+        self.keyboardTracker?.stopTracking()
         self.collectionView?.delegate = nil
         self.collectionView?.dataSource = nil
     }
