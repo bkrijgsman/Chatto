@@ -62,6 +62,9 @@ open class PhotoMessagePresenter<ViewModelBuilderT, InteractionHandlerT>
         return true
     }
 
+    open override func update(with chatItem: Chatto.ChatItemProtocol) {
+    }
+
     public final override func dequeueCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         return collectionView.dequeueReusableCell(withReuseIdentifier: "photo-message", for: indexPath)
     }

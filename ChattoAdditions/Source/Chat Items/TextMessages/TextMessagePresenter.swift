@@ -68,6 +68,9 @@ open class TextMessagePresenter<ViewModelBuilderT, InteractionHandlerT>
         return true
     }
 
+    open override func update(with chatItem: Chatto.ChatItemProtocol) {
+    }
+
     public final override func dequeueCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         let identifier = self.messageViewModel.isIncoming ? "text-message-incoming" : "text-message-outcoming"
         return collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
