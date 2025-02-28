@@ -95,6 +95,7 @@ open class ExpandableTextView: UITextView {
     private func commonInit() {
         self.setupTextDidChangeObserver()
         self.configurePlaceholder()
+        self.showPlaceholder()
         self.updatePlaceholderVisibility()
     }
 
@@ -226,7 +227,7 @@ open class ExpandableTextView: UITextView {
 
     private func updatePlaceholderVisibility() {
         if self.text == "" {
-            self.showPlaceholder()
+           // self.showPlaceholder()
         } else {
             self.hidePlaceholder()
         }
