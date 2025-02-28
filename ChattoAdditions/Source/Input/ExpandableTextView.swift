@@ -59,7 +59,11 @@ open class ExpandableTextView: UITextView {
 
     private func commonInit() {
         NotificationCenter.default.addObserver(self, selector: #selector(ExpandableTextView.textDidChange), name: UITextView.textDidChangeNotification, object: self)
+        
         self.configurePlaceholder()
+
+     
+        self.showPlaceholder()
         self.updatePlaceholderVisibility()
     }
 
@@ -191,7 +195,7 @@ open class ExpandableTextView: UITextView {
 
     private func updatePlaceholderVisibility() {
         if self.text == "" {
-            self.showPlaceholder()
+            //self.showPlaceholder()
         } else {
             self.hidePlaceholder()
         }
